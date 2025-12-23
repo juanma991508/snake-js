@@ -1,0 +1,17 @@
+.root { position:relative; min-height:100vh; min-width: 100vw; display:flex; align-items:center; justify-content:center; }
+.bg {
+  position:absolute; inset:0; transform-style:preserve-3d; overflow:hidden;
+  background: linear-gradient(135deg, #06121b 0%, #0d2a3a 50%, #07212e 100%);
+  animation: rotateBg 12s linear infinite;
+}
+@keyframes rotateBg {
+  from { transform: perspective(800px) rotateX(0deg) rotateY(0deg) translateZ(0); }
+  to { transform: perspective(800px) rotateX(10deg) rotateY(15deg) translateZ(0); }
+}
+.panel {
+  position:relative; z-index:2; background: rgba(255,255,255,0.04);
+  padding:28px; border-radius:12px; text-align:center; backdrop-filter: blur(6px);
+}
+.title { color:#fff; margin:0 0 12px 0; font-size:2rem; }
+.input { padding:8px 10px; font-size:1rem; border-radius:6px; margin-bottom:12px; }
+.controls button { margin:0 6px; padding:8px 12px; border-radius:6px; }
